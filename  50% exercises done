@@ -1,0 +1,2893 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPX+lOmPwXKI+PR5/C3GKkL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Luksonini/unitest-exercises/blob/main/%2050%25%20exercises%20done\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "nLfKfeLUiTBd",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "b12e1f76-0b68-4f8a-ec70-b518f0a3f738"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'3.10.12'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ],
+      "source": [
+        "import sys\n",
+        "\n",
+        "sys.version.split()[0]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "countries = ['POL', 'ENG', 'GER', 'USA', 'ITA']\n",
+        "is_italy = 'ITA' in countries\n",
+        "\n",
+        "assert is_italy"
+      ],
+      "metadata": {
+        "id": "8cdXM8WsmA5a"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "countries = ['POL', 'ENG', 'GER', 'USA', 'ITA']\n",
+        "is_canada = 'CAN' in countries\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "assert is_canada"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 201
+        },
+        "id": "OrlwGhjSnFY0",
+        "outputId": "ee69b474-f9ec-4d2c-b664-3c8d9e0a1d52"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AssertionError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-8-d8642e9f4c2a>\u001b[0m in \u001b[0;36m<cell line: 5>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;31m# tutaj wpisz rozwiązanie\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0;32massert\u001b[0m \u001b[0mis_canada\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAssertionError\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def max_min_diff(numbers):\n",
+        "    assert len(numbers) > 0\n",
+        "    return max(numbers) - min(numbers)\n",
+        "max_min_diff([])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 305
+        },
+        "id": "s2CkoVs-ndlQ",
+        "outputId": "3e21c9b8-7e06-47b5-a4bd-342e269f980e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AssertionError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-10-8a6f374ed3f5>\u001b[0m in \u001b[0;36m<cell line: 4>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m     \u001b[0;32massert\u001b[0m \u001b[0mlen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mmax\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0mmin\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m \u001b[0mmax_min_diff\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m<ipython-input-10-8a6f374ed3f5>\u001b[0m in \u001b[0;36mmax_min_diff\u001b[0;34m(numbers)\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mmax_min_diff\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m     \u001b[0;32massert\u001b[0m \u001b[0mlen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mmax\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0mmin\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mmax_min_diff\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mAssertionError\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def max_min_diff(numbers):\n",
+        "    assert len(numbers) > 0, 'The numbers object cannot be empty.'\n",
+        "    return max(numbers) - min(numbers)\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "if __name__ == '__main__':\n",
+        "    max_min_diff([])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 323
+        },
+        "id": "-FmNNtkXn10U",
+        "outputId": "5fdfa859-681f-4b75-af4a-7320eb7b564b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AssertionError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAssertionError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-11-06d7d49774f8>\u001b[0m in \u001b[0;36m<cell line: 6>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# tutaj wpisz rozwiązanie\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0m__name__\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m'__main__'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m     \u001b[0mmax_min_diff\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m<ipython-input-11-06d7d49774f8>\u001b[0m in \u001b[0;36mmax_min_diff\u001b[0;34m(numbers)\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mmax_min_diff\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m     \u001b[0;32massert\u001b[0m \u001b[0mlen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'The numbers object cannot be empty.'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mmax\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0mmin\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnumbers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# tutaj wpisz rozwiązanie\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mAssertionError\u001b[0m: The numbers object cannot be empty."
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def area(width, height):\n",
+        "    \"\"\"The function returns the area of the rectangle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(width, int) and isinstance(height, int)):\n",
+        "        raise TypeError('The width and height must be of type int.')\n",
+        "\n",
+        "    if not (width > 0 and height > 0):\n",
+        "        raise ValueError('The width and height must be positive.')\n",
+        "\n",
+        "    return width * height\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "assert area('5', '4') == 20"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 323
+        },
+        "id": "z8mhSi8GoUa_",
+        "outputId": "bda6c6c9-d96f-4da3-8a46-61f207c563b3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-12-60901f727859>\u001b[0m in \u001b[0;36m<cell line: 13>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     12\u001b[0m \u001b[0;31m# tutaj wpisz rozwiązanie\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 13\u001b[0;31m \u001b[0;32massert\u001b[0m \u001b[0marea\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'5'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'4'\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;36m20\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m<ipython-input-12-60901f727859>\u001b[0m in \u001b[0;36marea\u001b[0;34m(width, height)\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0misinstance\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mwidth\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0misinstance\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mheight\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m         \u001b[0;32mraise\u001b[0m \u001b[0mTypeError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'The width and height must be of type int.'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mwidth\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0mheight\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: The width and height must be of type int."
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def area(width, height):\n",
+        "    \"\"\"The function returns the area of the rectangle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(width, int) and isinstance(height, int)):\n",
+        "        raise TypeError('The width and height must be of type int.')\n",
+        "\n",
+        "    if not (width > 0 and height > 0):\n",
+        "        raise ValueError('The width and height must be positive.')\n",
+        "\n",
+        "    return width * height\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "assert area(-4, 5) == 20"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 323
+        },
+        "id": "YxL3GqGmpHJu",
+        "outputId": "87b5300f-e89e-4b37-d0b5-19345a374b3b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-13-53e4ea9d2346>\u001b[0m in \u001b[0;36m<cell line: 13>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     12\u001b[0m \u001b[0;31m# tutaj wpisz rozwiązanie\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 13\u001b[0;31m \u001b[0;32massert\u001b[0m \u001b[0marea\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m-\u001b[0m\u001b[0;36m4\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m5\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;36m20\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m<ipython-input-13-53e4ea9d2346>\u001b[0m in \u001b[0;36marea\u001b[0;34m(width, height)\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mwidth\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0mheight\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m         \u001b[0;32mraise\u001b[0m \u001b[0mValueError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'The width and height must be positive.'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mwidth\u001b[0m \u001b[0;34m*\u001b[0m \u001b[0mheight\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: The width and height must be positive."
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_tax(amount, tax_rate, age):\n",
+        "    \"\"\"The function returns the amount of income tax.\"\"\"\n",
+        "\n",
+        "    if age <= 18:\n",
+        "        return int(min(amount * tax_rate, 5000))\n",
+        "    elif age <= 65:\n",
+        "        return int(amount * tax_rate)\n",
+        "    else:\n",
+        "        return int(min(amount * tax_rate, 8000))\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "def test_calculate_tax():\n",
+        "    assert calculate_tax(60000, 0.15, 10) == 5000\n",
+        "\n",
+        "    assert calculate_tax(60000, 0.15, 18) == 5000\n",
+        "\n",
+        "    assert calculate_tax(60000, 0.15, 19) == 9000\n",
+        "\n",
+        "    assert calculate_tax(60000, 0.15, 65) == 9000\n",
+        "\n",
+        "    assert calculate_tax(60000, 0.15, 66) == 8000\n",
+        "\n",
+        "test_calculate_tax()"
+      ],
+      "metadata": {
+        "id": "oNktg0r_pb3L"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_tax(amount, tax_rate, age):\n",
+        "    \"\"\"The function returns the amount of income tax.\"\"\"\n",
+        "\n",
+        "    if age <= 18:\n",
+        "        return int(min(amount * tax_rate, 5000))\n",
+        "    elif age <= 65:\n",
+        "        return int(amount * tax_rate)\n",
+        "    else:\n",
+        "        return int(min(amount * tax_rate, 8000))\n",
+        "\n",
+        "def test_calculate_tax():\n",
+        "    assert calculate_tax(60000, 0.15, 10) == 5000\n",
+        "    assert calculate_tax(60000, 0.15, 18) == 5000\n",
+        "    assert calculate_tax(60000, 0.15, 19) == 9000\n",
+        "    assert calculate_tax(60000, 0.15, 65) == 9000\n",
+        "    assert calculate_tax(60000, 0.15, 66) == 8000\n",
+        "\n",
+        "test_calculate_tax()"
+      ],
+      "metadata": {
+        "id": "v8gwgJcwp70E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "class TestSplitMethod(unittest.TestCase):\n",
+        "\n",
+        "    def test_split_by_default(self):\n",
+        "        self.assertEqual('Python Testing'.split(), ['Python', 'Testing'])\n",
+        "\n",
+        "    def test_split_by_comma(self):\n",
+        "        self.assertEqual('open,high,low,close'.split(','), ['open', 'high', 'low', 'close'])\n",
+        "\n",
+        "    def test_split_by_hash(self):\n",
+        "        self.assertEqual('summer#time#vibes'.split('#'), ['summer', 'time', 'vibes'])\n"
+      ],
+      "metadata": {
+        "id": "0T42Q68hq2jq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class TestJoinMethod(unittest.TestCase):\n",
+        "\n",
+        "    def test_join_with_space(self):\n",
+        "        result = ' '.join(['Python', '3.8'])\n",
+        "        exp = 'Python 3.8'\n",
+        "        self.assertEqual(result, exp)\n",
+        "\n",
+        "    def test_join_with_comma(self):\n",
+        "        res = ','.join(['open', 'high', 'low', 'close'])\n",
+        "        exp = 'open,high,low,close'\n",
+        "        self.assertEqual(res, exp)\n",
+        "\n",
+        "    def test_join_with_new_line_char(self):\n",
+        "        res = '\\n'.join(['open', 'high', 'low', 'close'])\n",
+        "        exp = 'open\\nhigh\\nlow\\nclose'\n",
+        "        self.assertEqual(res, exp)"
+      ],
+      "metadata": {
+        "id": "VCZZqokAHF9P"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "from collections import Counter\n",
+        "\n",
+        "class TestIsInstance(unittest.TestCase):\n",
+        "\n",
+        "    def test_case_1(self):\n",
+        "        self.assertTrue(isinstance((), tuple))\n",
+        "\n",
+        "    def test_case_2(self):\n",
+        "        self.assertTrue(isinstance([], list))\n",
+        "\n",
+        "    def test_case_3(self):\n",
+        "        self.assertTrue(isinstance({}, dict))\n",
+        "\n",
+        "    def test_case_4(self):\n",
+        "        cnt = Counter()\n",
+        "        self.assertTrue(isinstance(cnt, Counter))\n",
+        "\n",
+        "    def test_case_5(self):\n",
+        "        var1 = 4\n",
+        "        self.assertTrue(isinstance(var1, int))\n",
+        "\n",
+        "    def test_case_6(self):\n",
+        "        var1 = 4,\n",
+        "        self.assertTrue(isinstance(var1, tuple))\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestIsInstance)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V8q3q2vuHGw4",
+        "outputId": "429e9b8e-7f70-46e5-a304-bd0594c48017"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_case_1 (__main__.TestIsInstance) ... ok\n",
+            "test_case_2 (__main__.TestIsInstance) ... ok\n",
+            "test_case_3 (__main__.TestIsInstance) ... ok\n",
+            "test_case_4 (__main__.TestIsInstance) ... ok\n",
+            "test_case_5 (__main__.TestIsInstance) ... ok\n",
+            "test_case_6 (__main__.TestIsInstance) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 6 tests in 0.025s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=6 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "_YDeWdTcLx5H"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 5\n",
+        "Wykorzystując framework unittest utwórz klasę TestUpper dziedziczącą po klasie unittest.TestCase oraz implementującą dwa poniższe testy:\n",
+        "\n",
+        "test_upper()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'summer'.upper() zwróci tekst 'SUMMER'\n",
+        "\n",
+        "test_is_upper()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'SUMMER'.isupper() zwraca wartość logiczną True\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'summer'.isupper() zwraca wartość logiczną False\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zdefiniować klasę i odpowiednie testy. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli."
+      ],
+      "metadata": {
+        "id": "kPEIz51yMCw1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class TestUpper(unittest.TestCase):\n",
+        "\n",
+        "    def test_upper(self):\n",
+        "        self.assertEqual('summer'.upper(), 'SUMMER')\n",
+        "\n",
+        "    def test_is_upper(self):\n",
+        "        self.assertTrue('SUMMER'.isupper())\n",
+        "        self.assertEqual('SUMMER'.isupper(), False)\n",
+        "\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestUpper)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g7vp19-9Il0z",
+        "outputId": "eea08cad-9955-461a-88c5-509e160cfdcd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_is_upper (__main__.TestUpper) ... FAIL\n",
+            "test_upper (__main__.TestUpper) ... ok\n",
+            "\n",
+            "======================================================================\n",
+            "FAIL: test_is_upper (__main__.TestUpper)\n",
+            "----------------------------------------------------------------------\n",
+            "Traceback (most recent call last):\n",
+            "  File \"<ipython-input-27-d6ee38928c52>\", line 11, in test_is_upper\n",
+            "    self.assertEqual('SUMMER'.isupper(), False)\n",
+            "AssertionError: True != False\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.012s\n",
+            "\n",
+            "FAILED (failures=1)\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=1>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 6\n",
+        "Wykorzystując framework unittest utwórz klasę TestLower dziedziczącą po klasie unittest.TestCase oraz implementującą dwa poniższe testy:\n",
+        "\n",
+        "test_lower()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'Joe.Smith@mail.com'.lower() zwróci tekst 'joe.smith@mail.com'\n",
+        "\n",
+        "test_is_lower()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'joe.smith@mail.com'.islower() zwraca wartość logiczną True\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'Joe.Smith@mail.com'.islower() zwraca wartość logiczną False\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zdefiniować klasę i odpowiednie testy. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli."
+      ],
+      "metadata": {
+        "id": "EtluexktMa1D"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "class TestLower(unittest.TestCase):\n",
+        "  def test_lower(self):\n",
+        "    self.assertEqual('Joe.Smith@mail.com'.lower(), 'joe.smith@mail.com')\n",
+        "\n",
+        "  def test_is_lower(self):\n",
+        "    self.assertTrue('joe.smith@mail.com'.islower())\n",
+        "    self.assertEqual('Joe.Smith@mail.com'.islower(), False)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestLower)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5fU7qS3rLPvv",
+        "outputId": "8327c70e-3ace-4c67-fece-73eee40e6e04"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_is_lower (__main__.TestLower) ... ok\n",
+            "test_lower (__main__.TestLower) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.012s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 7\n",
+        "Wykorzystując framework unittest utwórz dwie klasy o nazwach: TestStartswithMethod oraz TestEndswithMethod dziedziczące po klasie unittest.TestCase.\n",
+        "\n",
+        "Klasa TestStartswithMethod implementuje dwie metody testowe:\n",
+        "\n",
+        "test_startswith_one_letter()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'unittest'.startswith('u') zwróci wartość logiczną True\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'unittest'.startswith('U') zwróci wartość logiczną False\n",
+        "\n",
+        "test_startswith_four_letters()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'http://www.e-smartdata.org/'.startswith('http') zwraca wartość logiczną True\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'www.e-smartdata.org/'.startswith('http') zwraca wartość logiczną False\n",
+        "\n",
+        "Klasa TestEndswithMethod implementuje jedną metodę testową:\n",
+        "\n",
+        "test_endswith_three_letter()\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'e-smartdata.org'.endswith('org') zwróci wartość logiczną True\n",
+        "\n",
+        "test, który sprawdzi, czy kod 'e-smartdata.org'.endswith('com') zwróci wartość logiczną False\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zdefiniować klasy i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "-z15c_OoNnFn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "class TestStartswithMethod(unittest.TestCase):\n",
+        "  def test_startswith_one_letter(self):\n",
+        "    self.assertTrue('unittest'.startswith('u'))\n",
+        "    self.assertEqual('unittest'.startswith('U'), False)\n",
+        "\n",
+        "  def test_startswith_four_letters(self):\n",
+        "    self.assertTrue('http://www.e-smartdata.org/'.startswith('http'))\n",
+        "    self.assertEqual('www.e-smartdata.org/'.startswith('http') , False)\n",
+        "\n",
+        "class TestEndswithMethod(unittest.TestCase):\n",
+        "  def test_endswith_three_letter(self):\n",
+        "    self.assertTrue('e-smartdata.org'.endswith('org'))\n",
+        "    self.assertEqual('e-smartdata.org'.endswith('com') , False)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestStartswithMethod)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestEndswithMethod)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6isUMLkaNaci",
+        "outputId": "8d89868b-77ae-4e3d-db02-5da7c5ab9575"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_startswith_four_letters (__main__.TestStartswithMethod) ... ok\n",
+            "test_startswith_one_letter (__main__.TestStartswithMethod) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.016s\n",
+            "\n",
+            "OK\n",
+            "test_endswith_three_letter (__main__.TestEndswithMethod) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 1 test in 0.003s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=1 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 8\n",
+        "Wykorzystując framework unittest utwórz trzy klasy o nazwach: TestLstripMethod , TestStripMethod oraz TestRstripMethod dziedziczące po klasie unittest.TestCase. Następnie do każdej klasy dodaj po dwie metody testowe, testujące odpowiednio zachowanie metod:\n",
+        "\n",
+        "str.lstrip()\n",
+        "\n",
+        "str.strip()\n",
+        "\n",
+        "str.rstrip()\n",
+        "\n",
+        "\n",
+        "\n",
+        "Nazwy metod testowych i przypadki testowe dobierz według swojego uznania.\n"
+      ],
+      "metadata": {
+        "id": "Lu6QbfOxPaPm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class TestLstripMethod(unittest.TestCase):\n",
+        "\n",
+        "    def test_lstrip_with_space(self):\n",
+        "        self.assertEqual('  price,volume  '.lstrip(), 'price,volume  ')\n",
+        "\n",
+        "    def test_lstrip_with_new_line_char(self):\n",
+        "        self.assertEqual('\\nprice,volume\\n'.lstrip(), 'price,volume\\n')\n",
+        "\n",
+        "\n",
+        "class TestStripMethod(unittest.TestCase):\n",
+        "\n",
+        "    def test_strip_with_space(self):\n",
+        "        self.assertEqual('  price,volume  '.strip(), 'price,volume')\n",
+        "\n",
+        "    def test_strip_with_new_line_char(self):\n",
+        "        self.assertEqual('\\nprice,volume\\n'.strip(), 'price,volume')\n",
+        "\n",
+        "\n",
+        "class TestRstripMethod(unittest.TestCase):\n",
+        "\n",
+        "    def test_rstrip_with_space(self):\n",
+        "        self.assertEqual('  price,volume  '.rstrip(), '  price,volume')\n",
+        "\n",
+        "    def test_rstrip_with_new_line_char(self):\n",
+        "        self.assertEqual('\\nprice,volume\\n'.rstrip(), '\\nprice,volume')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Dovgmp5ePDPM",
+        "outputId": "7d6b5a81-0576-474d-ebaa-30f0a4d9ad7a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_right_strip (__main__.TestRstripMethod) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 1 test in 0.010s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=1 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 1\n",
+        "Podana jest poniższa funkcja calculate_daily_return(), która przyjmuje dwa argumenty: open oraz close będące odpowiednio ceną otwarcia oraz ceną zamknięcia instrumentu finansowego z danej sesji giełdowej i zwracająca procentową wartość dziennej stopy zwrotu.\n",
+        "\n",
+        "\n",
+        "\n",
+        "def calculate_daily_return(open, close):\n",
+        "    return round((close / open - 1) * 100, 2)\n",
+        "\n",
+        "\n",
+        "Dokończ implementację klasy TestCalculateDailyReturn dodając trzy metody testowe:\n",
+        "\n",
+        "test_positive_return()\n",
+        "\n",
+        "wykorzystując metodę assertEqual sprawdź czy kod calculate_daily_return(349.0, 360.0) zwróci dzienną stopę zwrotu 3.15\n",
+        "\n",
+        "test_negative_return()\n",
+        "\n",
+        "wykorzystując metodę assertEqual sprawdź czy kod calculate_daily_return(349.0, 340.0) zwróci dzienną stopę zwrotu -2.58\n",
+        "\n",
+        "test_zero_return()\n",
+        "\n",
+        "wykorzystując metodę assertEqual sprawdź czy kod calculate_daily_return(349.0, 349.0) zwróci dzienną stopę zwrotu 0.0\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "iQiinRPnTiU8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "def calculate_daily_return(open, close):\n",
+        "    return round((close / open - 1) * 100, 2)\n",
+        "\n",
+        "\n",
+        "class TestCalculateDailyReturn(unittest.TestCase):\n",
+        "    def test_positive_return(self):\n",
+        "        self.assertEqual(3.15, calculate_daily_return(349.0, 360.0))\n",
+        "    def test_negative_return(self):\n",
+        "        self.assertEqual(-2.58, calculate_daily_return(349.0, 340.0))\n",
+        "    def test_zero_return(self):\n",
+        "        self.assertEqual(0.0, calculate_daily_return(349.0, 349.0))\n",
+        "\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculateDailyReturn)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)\n",
+        "# suite = unittest.TestLoader().loadTestsFromTestCase(TestEndswithMethod)\n",
+        "# unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3OCT_K_NPwo4",
+        "outputId": "87e4a7cd-f5a3-4c53-b7ee-3b2f35388a7f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_negative_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "test_positive_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "test_zero_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.019s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 2\n",
+        "Podana jest poniższa funkcja calculate_daily_return(), która przyjmuje dwa argumenty: open oraz close będące odpowiednio ceną otwarcia oraz ceną zamknięcia instrumentu finansowego z danej sesji giełdowej i zwracająca procentową wartość dziennej stopy zwrotu (tym razem funkcja nie dokonuje zaokrąglenia wyniku).\n",
+        "\n",
+        "\n",
+        "\n",
+        "def calculate_daily_return(open, close):\n",
+        "    return (close / open - 1) * 100\n",
+        "\n",
+        "\n",
+        "Dokończ implementację klasy TestCalculateDailyReturn dodając trzy metody testowe:\n",
+        "\n",
+        "test_positive_return()\n",
+        "\n",
+        "wykorzystując metodę assertAlmostEqual sprawdź czy kod calculate_daily_return(349.0, 360.0) zwraca odpowiednią wartość\n",
+        "\n",
+        "test_negative_return()\n",
+        "\n",
+        "wykorzystując metodę assertAlmostEqual sprawdź czy kod calculate_daily_return(349.0, 340.0) zwraca odpowiednią wartość\n",
+        "\n",
+        "test_zero_return()\n",
+        "\n",
+        "wykorzystując metodę assertAlmostEqual sprawdź czy kod calculate_daily_return(349.0, 349.0) zwraca odpowiednią wartość\n",
+        "\n",
+        "\n",
+        "\n",
+        "Uwaga: Zwróć uwagę na sposób asercji w metodzie assertAlmostEqual.\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "KxrLz3AKWsd7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "def calculate_daily_return(open, close):\n",
+        "    return (close / open - 1) * 100\n",
+        "\n",
+        "\n",
+        "class TestCalculateDailyReturn(unittest.TestCase):\n",
+        "    def test_positive_return(self):\n",
+        "      self.assertAlmostEqual(calculate_daily_return(349.0, 360.0), 3.15, 2)\n",
+        "\n",
+        "    def test_negative_return(self):\n",
+        "      self.assertAlmostEqual(calculate_daily_return(349.0, 340.0), -2.58, 2)\n",
+        "\n",
+        "    def test_zero_return(self):\n",
+        "      self.assertAlmostEqual(calculate_daily_return(349.0, 349.0), 0, 1)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculateDailyReturn)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cq80qq-FP0fM",
+        "outputId": "3e15a35c-198d-43ef-ea7b-34573b7aed72"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_negative_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "test_positive_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "test_zero_return (__main__.TestCalculateDailyReturn) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.015s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 52
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 3\n",
+        "Podana jest poniższa klasa Doc:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class Doc:\n",
+        "\n",
+        "    def __init__(self, string):\n",
+        "        self.string = string\n",
+        "        \n",
+        "    def __repr__(self):\n",
+        "        return f\"Doc(string='{self.string}')\"\n",
+        "\n",
+        "    def __lt__(self, other):\n",
+        "        return len(self.string) < len(other.string)\n",
+        "\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestDoc dziedziczącą po klasie unittest.TestCase implementującą dwie metody testowe:\n",
+        "\n",
+        "test_less_than()\n",
+        "\n",
+        "sprawdza, czy doc2 < doc1 - wykorzystaj w tym celu metodę asercji assertLess()\n",
+        "\n",
+        "sprawdza, czy doc3 < doc1 - wykorzystaj w tym celu metodę asercji assertLess()\n",
+        "\n",
+        "test_greater_than()\n",
+        "\n",
+        "sprawdza, czy doc1 > doc2 - wykorzystaj w tym celu metodę asercji assertGreater()\n",
+        "\n",
+        "sprawdza, czy doc1 > doc3 - wykorzystaj w tym celu metodę asercji assertGreater()\n",
+        "\n",
+        "Gdzie doc1, doc2, doc3 są odpowiednio instancjami klasy Doc:\n",
+        "\n",
+        "\n",
+        "\n",
+        "doc1 = Doc('Technology')\n",
+        "doc2 = Doc('Online')\n",
+        "doc3 = Doc('Nature')\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "UuU_Lmh9Ynxx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Doc:\n",
+        "\n",
+        "    def __init__(self, string):\n",
+        "        self.string = string\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Doc(string='{self.string}')\"\n",
+        "\n",
+        "    def __lt__(self, other):\n",
+        "        return len(self.string) < len(other.string)\n",
+        "\n",
+        "\n",
+        "class TestDoc(unittest.TestCase):\n",
+        "  doc1 = Doc('Technology')\n",
+        "  doc2 = Doc('Online')\n",
+        "  doc3 = Doc('Nature')\n",
+        "  def test_less_than(self):\n",
+        "    self.assertLess(TestDoc.doc2, TestDoc.doc1)\n",
+        "    self.assertLess(TestDoc.doc3, TestDoc.doc1)\n",
+        "  def test_greater_than(self):\n",
+        "    self.assertGreater(TestDoc.doc1, TestDoc.doc2)\n",
+        "    self.assertGreater(TestDoc.doc1, TestDoc.doc3)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestDoc)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XxKmGk_CXISv",
+        "outputId": "2d9e5dd8-b29a-47f4-d114-9d375a957dea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_greater_than (__main__.TestDoc) ... ok\n",
+            "test_less_than (__main__.TestDoc) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.009s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 54
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 4\n",
+        "Podana jest poniższa klasa Doc:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class Doc:\n",
+        "\n",
+        "    def __init__(self, string):\n",
+        "        self.string = string\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Doc(string='{self.string}')\"\n",
+        "\n",
+        "    def __eq__(self, other):\n",
+        "        return len(self.string) == len(other.string)\n",
+        "\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestDoc dziedziczącą po klasie unittest.TestCase implementującą dwie metody testowe:\n",
+        "\n",
+        "test_equal()\n",
+        "\n",
+        "sprawdza przy użyciu metody assertEqual(), czy doc1 == doc2\n",
+        "\n",
+        "test_not_equal()\n",
+        "\n",
+        "sprawdza przy użyciu metody assertNotEqual(), czy doc3 != doc1\n",
+        "\n",
+        "sprawdza przy użyciu metody assertNotEqual(), czy doc3 != doc2\n",
+        "\n",
+        "Gdzie doc1, doc2, doc3 są odpowiednio instancjami klasy Doc:\n",
+        "\n",
+        "\n",
+        "\n",
+        "doc1 = Doc('Online')\n",
+        "doc2 = Doc('Nature')\n",
+        "doc3 = Doc('Technology')\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "qta3UOtvfUtM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Doc:\n",
+        "\n",
+        "    def __init__(self, string):\n",
+        "        self.string = string\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Doc(string='{self.string}')\"\n",
+        "\n",
+        "    def __eq__(self, other):\n",
+        "        return len(self.string) == len(other.string)\n",
+        "\n",
+        "\n",
+        "class TestDoc(unittest.TestCase):\n",
+        "  doc1 = Doc('Online')\n",
+        "  doc2 = Doc('Nature')\n",
+        "  doc3 = Doc('Technology')\n",
+        "  def test_equal(self):\n",
+        "    self.assertEqual(TestDoc.doc1, TestDoc.doc2)\n",
+        "  def test_not_equal(self):\n",
+        "    self.assertNotEqual(TestDoc.doc3, TestDoc.doc1)\n",
+        "    self.assertNotEqual(TestDoc.doc3, TestDoc.doc2)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestDoc)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mcXx7KrbXJ-P",
+        "outputId": "9aec7750-3b4c-4c2c-82f2-f4101c4f656a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_equal (__main__.TestDoc) ... ok\n",
+            "test_not_equal (__main__.TestDoc) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.010s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 56
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 5\n",
+        "Podana jest implementacja klasy Employee:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class Employee:\n",
+        "    \"\"\"A simple class that describes an employee of the company.\"\"\"\n",
+        "\n",
+        "    tax_rate = 0.17\n",
+        "    bonus_rate = 0.10\n",
+        "\n",
+        "    def __init__(self, first_name, last_name, salary):\n",
+        "        self.first_name = first_name\n",
+        "        self.last_name = last_name\n",
+        "        self.salary = salary\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return f'{self.first_name} {self.last_name}'\n",
+        "\n",
+        "    @property\n",
+        "    def email(self):\n",
+        "        return f'{self.first_name.lower()}.{self.last_name.lower()}@mail.com'\n",
+        "\n",
+        "    @property\n",
+        "    def tax(self):\n",
+        "        return round(self.salary * self.tax_rate, 2)\n",
+        "\n",
+        "    def apply_bonus(self):\n",
+        "        self.salary = int(self.salary * (1 + self.bonus_rate))\n",
+        "\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestEmployee dziedziczącą po klasie unittest.TestCase implementującą trzy metody testowe:\n",
+        "\n",
+        "test_has_email_attr()\n",
+        "\n",
+        "sprawdza, czy klasa Employee posiada atrybut email, w przypadku braku atrybutu zwróć wiadomość:\n",
+        "\n",
+        "\n",
+        "\n",
+        "'The Employee class does not have an email attribute.'\n",
+        "\n",
+        "\n",
+        "test_has_tax_attr()\n",
+        "\n",
+        "sprawdza, czy klasa Employee posiada atrybut tax, w przypadku braku atrybutu zwróć wiadomość:\n",
+        "\n",
+        "\n",
+        "\n",
+        "'The Employee class does not have a tax attribute.'\n",
+        "\n",
+        "\n",
+        "test_has_apply_bonus()\n",
+        "\n",
+        "sprawdza, czy klasa Employee posiada atrybut apply_bonus, w przypadku braku atrybutu zwróć wiadomość:\n",
+        "\n",
+        "\n",
+        "\n",
+        "'The Employee class does not have an apply_bonus attribute.'\n",
+        "\n",
+        "\n",
+        "Wskazówka: Wykorzystaj funkcję wbudowaną hasattr() oraz metodę asercji assertTrue().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "MRHECaZjg1zr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Employee:\n",
+        "    \"\"\"A simple class that describes an employee of the company.\"\"\"\n",
+        "\n",
+        "    tax_rate = 0.17\n",
+        "    bonus_rate = 0.10\n",
+        "\n",
+        "    def __init__(self, first_name, last_name, salary):\n",
+        "        self.first_name = first_name\n",
+        "        self.last_name = last_name\n",
+        "        self.salary = salary\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return f'{self.first_name} {self.last_name}'\n",
+        "\n",
+        "    @property\n",
+        "    def email(self):\n",
+        "        return (\n",
+        "            f'{self.first_name.lower()}.{self.last_name.lower()}'\n",
+        "            '@mail.com'\n",
+        "        )\n",
+        "\n",
+        "    @property\n",
+        "    def tax(self):\n",
+        "        return round(self.salary * self.tax_rate, 2)\n",
+        "\n",
+        "    def apply_bonus(self):\n",
+        "        self.salary = int(self.salary * (1 + self.bonus_rate))\n",
+        "\n",
+        "\n",
+        "class TestEmployee(unittest.TestCase):\n",
+        "  # employee = Employee(\"a\",\"b\",1000)\n",
+        "  def test_has_email_attr(self):\n",
+        "    self.assertTrue(hasattr(Employee, 'email'), 'The Employee class does not have a tax attribute.')\n",
+        "\n",
+        "  def test_has_tax_attr(self):\n",
+        "    self.assertTrue(hasattr(Employee, 'tax'), 'The Employee class does not have a tax attribute.')\n",
+        "\n",
+        "  def test_has_apply_bonus(self):\n",
+        "    self.assertTrue(hasattr(Employee, 'apply_bonus'), 'The Employee class does not have an apply_bonus attribute.')\n",
+        "\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestEmployee)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1JghHlV5gqWv",
+        "outputId": "4c3dabc9-5c76-4e5b-b0b5-f594360aa665"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_has_apply_bonus (__main__.TestEmployee) ... ok\n",
+            "test_has_email_attr (__main__.TestEmployee) ... ok\n",
+            "test_has_tax_attr (__main__.TestEmployee) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.016s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 63
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "eLpz4eGhmsrs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "help(hasattr)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fv_ghYD2hXUq",
+        "outputId": "fd243f62-0409-46df-cebd-42fc4791cf58"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Help on built-in function hasattr in module builtins:\n",
+            "\n",
+            "hasattr(obj, name, /)\n",
+            "    Return whether the object has an attribute with the given name.\n",
+            "    \n",
+            "    This is done by calling getattr(obj, name) and catching AttributeError.\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 6\n",
+        "Podana jest implementacja klasy Employee:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class Employee:\n",
+        "    \"\"\"A simple class that describes an employee of the company.\"\"\"\n",
+        "\n",
+        "    tax_rate = 0.17\n",
+        "    bonus_rate = 0.10\n",
+        "\n",
+        "    def __init__(self, first_name, last_name, salary):\n",
+        "        self.first_name = first_name\n",
+        "        self.last_name = last_name\n",
+        "        self.salary = salary\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return f'{self.first_name} {self.last_name}'\n",
+        "\n",
+        "    @property\n",
+        "    def email(self):\n",
+        "        return (\n",
+        "            f'{self.first_name.lower()}.{self.last_name.lower()}'\n",
+        "            '@mail.com'\n",
+        "        )\n",
+        "\n",
+        "    @property\n",
+        "    def tax(self):\n",
+        "        return round(self.salary * self.tax_rate, 2)\n",
+        "\n",
+        "    def apply_bonus(self):\n",
+        "        self.salary = int(self.salary * (1 + self.bonus_rate))\n",
+        "\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestEmployee dziedziczącą po klasie unittest.TestCase implementującą dwie metody testowe:\n",
+        "\n",
+        "test_has_email_attr()\n",
+        "\n",
+        "sprawdza, czy klasa Employee posiada atrybut email, w przypadku braku atrybutu zwróć wiadomość (wykorzystaj funkcję wbudowaną hasattr() oraz metodę asercji assertTrue()):\n",
+        "\n",
+        "\n",
+        "'The Employee class does not have an email attribute.'\n",
+        "\n",
+        "\n",
+        "test_has_email_property()\n",
+        "\n",
+        "sprawdza, czy atrybut Employee.email jest typu property. Wykorzystaj w tym celu metodę asercji assertIsInstance().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "FHm8_q_imt4j"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Employee:\n",
+        "    \"\"\"A simple class that describes an employee of the company.\"\"\"\n",
+        "\n",
+        "    tax_rate = 0.17\n",
+        "    bonus_rate = 0.10\n",
+        "\n",
+        "    def __init__(self, first_name, last_name, salary):\n",
+        "        self.first_name = first_name\n",
+        "        self.last_name = last_name\n",
+        "        self.salary = salary\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return f'{self.first_name} {self.last_name}'\n",
+        "\n",
+        "    @property\n",
+        "    def email(self):\n",
+        "        return (\n",
+        "            f'{self.first_name.lower()}.{self.last_name.lower()}'\n",
+        "            '@mail.com'\n",
+        "        )\n",
+        "\n",
+        "    @property\n",
+        "    def tax(self):\n",
+        "        return round(self.salary * self.tax_rate, 2)\n",
+        "\n",
+        "    def apply_bonus(self):\n",
+        "        self.salary = int(self.salary * (1 + self.bonus_rate))\n",
+        "\n",
+        "\n",
+        "class TestEmployee(unittest.TestCase):\n",
+        "    def test_has_email_attr(self):\n",
+        "        self.assertTrue(hasattr(Employee, 'email'), 'The Employee class does not have an email attribute.')\n",
+        "\n",
+        "    def test_has_email_property(self):\n",
+        "        self.assertIsInstance(Employee.email, property)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestEmployee)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dEqG0PhXhavf",
+        "outputId": "977c3a29-e191-480c-c0b8-6ef27ca057ea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_has_email_attr (__main__.TestEmployee) ... ok\n",
+            "test_has_email_property (__main__.TestEmployee) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.009s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 65
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 7\n",
+        "Podana jest implementacja klasy StringListOnly:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class StringListOnly(list):\n",
+        "\n",
+        "    def append(self, string):\n",
+        "        if not isinstance(string, str):\n",
+        "            raise TypeError('Only object of type str can be added to the list.')\n",
+        "        super().append(string)\n",
+        "\n",
+        "\n",
+        "Do listy typu StringListOnly metodą append() można dodawać tylko obiekty typu str.\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestStringListOnly dziedziczącą po klasie unittest.TestCase implementującą dwie metody testowe:\n",
+        "\n",
+        "test_append_string()\n",
+        "\n",
+        "sprawdza, czy do instancji klasy StringListOnly możemy dodać metodą append() obiekt typu str. Wykorzystaj w tym celu metodę asercji assertIn().\n",
+        "\n",
+        "test_append_not_string_should_raise_error()\n",
+        "\n",
+        "sprawdza, czy przy próbie dodania instancji typu list zostanie podniesiony błąd TypeError. Przykładową listę dobierz dowolnie. Wykorzystaj w tym celu metodę asercji assertRaises().\n",
+        "\n",
+        "sprawdza, czy przy próbie dodania instancji typu bool zostanie podniesiony błąd TypeError. Przykładowy obiekt typu bool dobierz dowolnie. Wykorzystaj w tym celu metodę asercji assertRaises().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę i odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli."
+      ],
+      "metadata": {
+        "id": "fT68cXgtuviG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "wHJXHpd_uvD2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class StringListOnly(list):\n",
+        "    def append(self, string):\n",
+        "        if not isinstance(string, str):\n",
+        "            raise TypeError(\n",
+        "                'Only object of type str can be added to the list.'\n",
+        "            )\n",
+        "        super().append(string)\n",
+        "\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "class TestStringListOnly(unittest.TestCase):\n",
+        "    def test_append_string(self):\n",
+        "        slo = StringListOnly()\n",
+        "        string = 'string'\n",
+        "        slo.append(string)\n",
+        "        self.assertIn('string', slo)\n",
+        "\n",
+        "    def test_append_not_string_should_raise_error(self):\n",
+        "        self.assertRaises(TypeError, StringListOnly.append, ['beleu'])\n",
+        "        self.assertRaises(TypeError, StringListOnly.append, False)\n",
+        "\n",
+        "\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestStringListOnly)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1N6BDOLqm2I0",
+        "outputId": "53f9e19e-9ae2-4ebc-ee35-6428f0f923cf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_append_not_string_should_raise_error (__main__.TestStringListOnly) ... ok\n",
+            "test_append_string (__main__.TestStringListOnly) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.011s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 74
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "help(unittest.TestCase.assertRaises)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J3bX2yuerHze",
+        "outputId": "8bb0888a-0419-45ed-e21f-993fc3c4ee26"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Help on function assertRaises in module unittest.case:\n",
+            "\n",
+            "assertRaises(self, expected_exception, *args, **kwargs)\n",
+            "    Fail unless an exception of class expected_exception is raised\n",
+            "    by the callable when invoked with specified positional and\n",
+            "    keyword arguments. If a different type of exception is\n",
+            "    raised, it will not be caught, and the test case will be\n",
+            "    deemed to have suffered an error, exactly as for an\n",
+            "    unexpected exception.\n",
+            "    \n",
+            "    If called with the callable and arguments omitted, will return a\n",
+            "    context object used like this::\n",
+            "    \n",
+            "         with self.assertRaises(SomeException):\n",
+            "             do_something()\n",
+            "    \n",
+            "    An optional keyword argument 'msg' can be provided when assertRaises\n",
+            "    is used as a context object.\n",
+            "    \n",
+            "    The context manager keeps a reference to the exception as\n",
+            "    the 'exception' attribute. This allows you to inspect the\n",
+            "    exception after the assertion::\n",
+            "    \n",
+            "        with self.assertRaises(SomeException) as cm:\n",
+            "            do_something()\n",
+            "        the_exception = cm.exception\n",
+            "        self.assertEqual(the_exception.error_code, 3)\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 8\n",
+        "Podana jest implementacja klasy StringListOnly:\n",
+        "\n",
+        "\n",
+        "\n",
+        "class StringListOnly(list):\n",
+        "    def append(self, string):\n",
+        "        if not isinstance(string, str):\n",
+        "            raise TypeError(\n",
+        "                'Only object of type str can be added to the list.'\n",
+        "            )\n",
+        "        super().append(string)\n",
+        "\n",
+        "\n",
+        "Do listy typu StringListOnly metodą append() można dodawać tylko obiekty typu str.\n",
+        "\n",
+        "Wykorzystując framework unittest utwórz klasę TestStringListOnly dziedziczącą po klasie unittest.TestCase implementującą metodę testową:\n",
+        "\n",
+        "test_slo_is_instance()\n",
+        "\n",
+        "sprawdza, czy instancja slo = StringListOnly() jest instancją klasy StringListOnly. Wykorzystaj w tym celu metodę asercji assertIsInstance().\n",
+        "\n",
+        "sprawdza, czy instancja slo = StringListOnly() jest instancją klasy wbudowanej list. Wykorzystaj w tym celu metodę asercji assertIsInstance().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zaimplementować klasę oraz odpowiednie metody testowe. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "8d9K_35PvY8-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class StringListOnly(list):\n",
+        "    def append(self, string):\n",
+        "        if not isinstance(string, str):\n",
+        "            raise TypeError(\n",
+        "                'Only object of type str can be added to the list.'\n",
+        "            )\n",
+        "        super().append(string)\n",
+        "\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "class TestStringListOnly(unittest.TestCase):\n",
+        "    def test_slo_is_instance(self):\n",
+        "        slo = StringListOnly()\n",
+        "        self.assertIsInstance(slo, StringListOnly)\n",
+        "        self.assertIsInstance(slo, list)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestStringListOnly)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QxiYbOyvsST7",
+        "outputId": "92cfdb9e-4cc2-4214-e746-2b8ec0fe0a5a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_slo_is_instance (__main__.TestStringListOnly) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 1 test in 0.006s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=1 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 76
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from datetime import date\n",
+        "\n",
+        "date.today().day"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qVTQj-xTvdAT",
+        "outputId": "41f51e7e-fef5-4a74-bb96-7936a94d3488"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "16"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 81
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 2\n",
+        "Podany jest poniższy kod:\n",
+        "\n",
+        "\n",
+        "\n",
+        "from datetime import date\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "\n",
+        "    def __init__(self):\n",
+        "        if date.today().day % 2 == 0:\n",
+        "            self.code = 'XC-0'\n",
+        "        else:\n",
+        "            self.code = 'XC-1'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    def test_skipping_odd_days(self):\n",
+        "        c = Container()\n",
+        "        self.assertTrue(c.code.endswith('0'))\n",
+        "\n",
+        "    def test_skipping_even_days(self):\n",
+        "        c = Container()\n",
+        "        self.assertTrue(c.code.endswith('1'))\n",
+        "\n",
+        "\n",
+        "Zmodyfikuj implementację klasy TestContainer, tak aby:\n",
+        "\n",
+        "metoda testowa test_skipping_odd_days() została pomijana w dni nieparzyste. Podaj powód pominięcia testu: 'Skipping odd days.'\n",
+        "\n",
+        "metoda testowa test_skipping_even_days() została pomijana w dni parzyste. Podaj powód pominięcia testu: 'Skipping even days.'\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wskazówka: Użyj dekoratora unittest.skipIf().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zmodyfikować implementację klasy TestContainer. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "uVkfLuYVwlRA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from datetime import date\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    @unittest.skipIf(date.today().day % 2 != 0, 'Skipping odd days.')\n",
+        "    def test_skipping_odd_days(self):\n",
+        "        c = Container()\n",
+        "        self.assertTrue(c.code.endswith('0'), 'Invalid code attribute.')\n",
+        "\n",
+        "    @unittest.skipIf(date.today().day % 2 == 0, 'Skipping even days.')\n",
+        "    def test_skipping_even_days(self):\n",
+        "        c = Container()\n",
+        "        self.assertTrue(c.code.endswith('1'), 'Invalid code attribute.')\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestStringListOnly)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qArwP7rvwLOE",
+        "outputId": "8a5221f0-7244-4e5c-84cd-de406bd9e605"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_slo_is_instance (__main__.TestStringListOnly) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 1 test in 0.003s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=1 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 85
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "\n",
+        "sys.platform"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "MipbE7Dcwwpl",
+        "outputId": "db4a2796-9edf-451e-d78d-7ab27a7f7c63"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'linux'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 87
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 3\n",
+        "Podany jest poniższy kod:\n",
+        "\n",
+        "\n",
+        "\n",
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    def test_requires_windows(self):\n",
+        "        c = Container()\n",
+        "        self.assertEqual(c.code, 'XC-win')\n",
+        "\n",
+        "    def test_requires_linux(self):\n",
+        "        c = Container()\n",
+        "        self.assertEqual(c.code, 'XC-linux')\n",
+        "\n",
+        "\n",
+        "Zmodyfikuj implementację klasy TestContainer, tak aby:\n",
+        "\n",
+        "metoda testowa test_requires_windows() została uruchomiona tylko na systemie Windows.\n",
+        "Podaj powód pominięcia testu: 'Requires Windows.'\n",
+        "\n",
+        "metoda testowa test_requires_linux() została uruchomiona tylko na systemie Linux.\n",
+        "Podaj powód pominięcia testu: 'Requires Linux.'\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wskazówka: Użyj dekoratora unittest.skipUnless().\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wystarczy tylko zmodyfikować implementację klasy TestContainer. W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "7o0LwIdYzHik"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    @unittest.skipUnless(sys.platform.startswith('win'), 'Requires Windows.')\n",
+        "    def test_requires_windows(self):\n",
+        "        c = Container()\n",
+        "        self.assertEqual(c.code, 'XC-win')\n",
+        "\n",
+        "    @unittest.skipUnless(sys.platform.startswith('linux'), 'Requires Linux.')\n",
+        "    def test_requires_linux(self):\n",
+        "        c = Container()\n",
+        "        self.assertEqual(c.code, 'XC-linux')"
+      ],
+      "metadata": {
+        "id": "jUjOdsZIxjv7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 1\n",
+        "Podany jest poniższy kod:\n",
+        "\n",
+        "\n",
+        "\n",
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('win'), 'Requires Windows.'\n",
+        "    )\n",
+        "    def test_requires_windows(self):\n",
+        "        container = Container()  # kod do usunięcia\n",
+        "        self.assertEqual(container.code, 'XC-win')\n",
+        "\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('linux'), 'Requires Linux.'\n",
+        "    )\n",
+        "    def test_requires_linux(self):\n",
+        "        container = Container()  # kod do usunięcia\n",
+        "        self.assertEqual(container.code, 'XC-linux')\n",
+        "\n",
+        "\n",
+        "Zauważ, że w każdym teście wykorzystujemy ten sam kod, tzn. poniższy fragment:\n",
+        "\n",
+        "\n",
+        "\n",
+        "container = Container()\n",
+        "\n",
+        "\n",
+        "Postaraj się zastąpić te dwa kawałki kodu dodając funkcję setUpModule(), która pozwoli utworzyć instancję klasy Container o nazwie container na poziomie całego modułu testowego. Instancja container powinna być osiągalna z poziomu każdego testu.\n",
+        "\n",
+        "\n",
+        "\n",
+        "Wskazówka: Użyj instrukcji global.\n",
+        "\n",
+        "\n",
+        "\n",
+        "W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "8oAPtzVs2XUP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "def setUpModule():\n",
+        "    global container\n",
+        "    container = Container()\n",
+        "\n",
+        "class Container:\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('win'), 'Requires Windows.'\n",
+        "    )\n",
+        "    def test_requires_windows(self):\n",
+        "        self.assertEqual(container.code, 'XC-win')\n",
+        "\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('linux'), 'Requires Linux.'\n",
+        "    )\n",
+        "    def test_requires_linux(self):\n",
+        "        self.assertEqual(container.code, 'XC-linux')\n"
+      ],
+      "metadata": {
+        "id": "xcIPL-Bv2ZOb"
+      },
+      "execution_count": 26,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 3\n",
+        "Podany jest poniższy kod:\n",
+        "\n",
+        "\n",
+        "\n",
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('win'), 'Requires Windows.'\n",
+        "    )\n",
+        "    def test_requires_windows(self):\n",
+        "        container = Container()\n",
+        "        self.assertEqual(container.code, 'XC-win')\n",
+        "\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('linux'), 'Requires Linux.'\n",
+        "    )\n",
+        "    def test_requires_linux(self):\n",
+        "        container = Container()\n",
+        "        self.assertEqual(container.code, 'XC-linux')\n",
+        "\n",
+        "\n",
+        "Zauważ, że w każdym teście wykorzystujemy ten sam kod, tzn. poniższy fragment:\n",
+        "\n",
+        "\n",
+        "\n",
+        "container = Container()\n",
+        "\n",
+        "\n",
+        "Postaraj się zastąpić te dwa kawałki kodu dodając metodę klasy o nazwie setUpClass() klasy TestContainer, która pozwoli utworzyć instancję klasy Container na poziomie całej klasy testowej (jako atrybut klasy testowej) o nazwie container.\n",
+        "\n",
+        "\n",
+        "\n",
+        "W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "cgyPIgo32hQm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "\n",
+        "    def __init__(self):\n",
+        "        if sys.platform.startswith('win'):\n",
+        "            self.code = 'XC-win'\n",
+        "        else:\n",
+        "            self.code = f'XC-{sys.platform}'\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    # tutaj wpisz rozwiązanie\n",
+        "    @classmethod\n",
+        "    def setUpClass(cls):\n",
+        "        cls.container = Container()\n",
+        "\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('win'), 'Requires Windows.'\n",
+        "    )\n",
+        "    def test_requires_windows(self):\n",
+        "        # container = Container()  # kod do usunięcia\n",
+        "        self.assertEqual(\n",
+        "            self.container.code, 'XC-win'\n",
+        "        )  # kod do modyfikacji\n",
+        "\n",
+        "    @unittest.skipUnless(\n",
+        "        sys.platform.startswith('linux'), 'Requires Linux.'\n",
+        "    )\n",
+        "    def test_requires_linux(self):\n",
+        "        # container = Container()  # kod do usunięcia\n",
+        "        self.assertEqual(\n",
+        "            self.container.code, 'XC-linux'\n",
+        "        )  # kod do modyfikacji\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestContainer)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kEHHaiM72f49",
+        "outputId": "50eb5de0-596a-4cf6-d4be-10bfda4874ab"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_requires_linux (__main__.TestContainer) ... ok\n",
+            "test_requires_windows (__main__.TestContainer) ... skipped 'Requires Windows.'\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 2 tests in 0.013s\n",
+            "\n",
+            "OK (skipped=1)\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=2 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 5\n",
+        "Podany jest poniższy kod:\n",
+        "\n",
+        "\n",
+        "\n",
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "    def __init__(self, category):\n",
+        "        self.category = category\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Container(category='{self.category}')\"\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "    def test_init_method(self):\n",
+        "        container = Container('plastic')\n",
+        "        msg = 'The container instance does not have a category attribute.'\n",
+        "        self.assertTrue(hasattr(container, 'category'), msg)\n",
+        "        self.assertEqual(container.category, 'plastic')\n",
+        "\n",
+        "    def test_repr_method(self):\n",
+        "        container = Container('plastic')\n",
+        "        self.assertEqual(\n",
+        "            repr(container), \"Container(category='plastic')\"\n",
+        "        )\n",
+        "\n",
+        "\n",
+        "Zauważ, że w każdym teście wykorzystujemy ten sam kod, tzn. poniższy fragment:\n",
+        "\n",
+        "\n",
+        "\n",
+        "container = Container('plastic')\n",
+        "\n",
+        "\n",
+        "Postaraj się zastąpić te dwa kawałki kodu dodając metodę o nazwie setUp() klasy TestContainer, która pozwoli utworzyć instancję klasy Container na poziomie każdego testu klasy testowej (jako atrybut klasy testowej) o nazwie container.\n",
+        "\n",
+        "\n",
+        "\n",
+        "W trakcie weryfikacji rozwiązania testy są uruchamiane i w razie ewentualnych błędów raport o testach zostanie wydrukowany do konsoli.\n"
+      ],
+      "metadata": {
+        "id": "5jdfRPQi9REZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sys\n",
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Container:\n",
+        "    def __init__(self, category):\n",
+        "        self.category = category\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Container(category='{self.category}')\"\n",
+        "\n",
+        "\n",
+        "class TestContainer(unittest.TestCase):\n",
+        "\n",
+        "    # tutaj wpisz rozwiązanie\n",
+        "    def setUp(self):\n",
+        "        self.container = Container('plastic')\n",
+        "\n",
+        "    def tearDown(self):\n",
+        "        del self.container\n",
+        "\n",
+        "    def test_init_method(self):\n",
+        "        msg = 'The container instance does not have a category attribute.'\n",
+        "        self.assertTrue(\n",
+        "            hasattr(self.container, 'category'), msg\n",
+        "        )  # kod do modyfikacji\n",
+        "        self.assertEqual(\n",
+        "            self.container.category, 'plastic'\n",
+        "        )  # kod do modyfikacji\n",
+        "\n",
+        "    def test_repr_method(self):\n",
+        "        self.assertEqual(\n",
+        "            repr(self.container), \"Container(category='plastic')\"\n",
+        "        )  # kod do modyfikacji\n"
+      ],
+      "metadata": {
+        "id": "u_lYdDAf4vaX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 1\n",
+        "Podana jest poniższa funkcja pozwalająca obliczyć pole koła o zadanym promieniu:\n",
+        "\n",
+        "\n",
+        "\n",
+        "def area(radius):\n",
+        "    \"\"\"The function returns the area of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return math.pi * radius ** 2\n",
+        "\n",
+        "\n",
+        "Zaimplementuj klasę TestArea dziedziczącą po klasie unittest.TestCase oraz implementującą kolejne testy:\n",
+        "\n",
+        "test_circle_area_with_radius_one() test sprawdzający poprawność wyliczenia pola koła dla promienia równego 1 (porównaj wyniki do 5 miejsca po przecinku)\n",
+        "\n",
+        "test_circle_area_with_radius_three() test sprawdzający poprawność wyliczenia pola koła dla promienia równego 3 (porównaj wyniki do 5 miejsca po przecinku)\n",
+        "\n",
+        "test_area_incorrect_type_should_raise_type_error()\n",
+        "\n",
+        "sprawdza, czy wywołanie area('4') zwraca błąd TypeError\n",
+        "\n",
+        "sprawdza, czy wywołanie area(None) zwraca błąd TypeError\n",
+        "\n",
+        "test_area_incorrect_value_should_raise_value_error()\n",
+        "\n",
+        "sprawdza, czy wywołanie area(0) zwraca błąd ValueError\n",
+        "\n",
+        "sprawdza, czy wywołanie area(-3) zwraca błąd ValueError\n"
+      ],
+      "metadata": {
+        "id": "6UILz87dEPrb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "def area(radius):\n",
+        "    \"\"\"The function returns the area of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return math.pi * radius ** 2\n",
+        "\n",
+        "area(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "apMqDAqzC8om",
+        "outputId": "bf72561c-f9db-4cbf-f682-925689786163"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "28.274333882308138"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "import math\n",
+        "\n",
+        "\n",
+        "def area(radius):\n",
+        "    \"\"\"The function returns the area of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return math.pi * radius ** 2\n",
+        "\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "class TestArea(unittest.TestCase):\n",
+        "    def test_circle_area_with_radius_one(self):\n",
+        "        self.assertAlmostEqual(area(1), 3.14159, 5)\n",
+        "\n",
+        "    def test_circle_area_with_radius_three(self):\n",
+        "        self.assertAlmostEqual(area(3), 28.27433, 5)\n",
+        "\n",
+        "    def test_area_incorrect_type_should_raise_type_error(self):\n",
+        "        self.assertRaises(ValueError, area, 0)\n",
+        "        self.assertRaises(ValueError, area, -3)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestArea)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ml1tXsZRC-6n",
+        "outputId": "3b578447-8df1-4dca-811f-1fd646e44b65"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_area_incorrect_type_should_raise_type_error (__main__.TestArea) ... ok\n",
+            "test_circle_area_with_radius_one (__main__.TestArea) ... ok\n",
+            "test_circle_area_with_radius_three (__main__.TestArea) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.017s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ćwiczenie 2\n",
+        "Podana jest poniższa funkcja pozwalająca obliczyć długość okręgu o zadanym promieniu:\n",
+        "\n",
+        "\n",
+        "\n",
+        "def perimeter(radius):\n",
+        "    \"\"\"The function returns the length of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return 2 * math.pi * radius\n",
+        "\n",
+        "\n",
+        "Zaimplementuj klasę TestPerimeter dziedziczącą po klasie unittest.TestCase oraz implementującą cztery różne testy. Testy dobierz dowolnie. Wykorzystaj kilka różnych metod asercji.\n"
+      ],
+      "metadata": {
+        "id": "zoZdK3g4Hkf8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "import math\n",
+        "\n",
+        "\n",
+        "def perimeter(radius):\n",
+        "    \"\"\"The function returns the length of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return 2 * math.pi * radius\n",
+        "\n",
+        "\n",
+        "# tutaj wpisz rozwiązanie\n",
+        "class TestPerimeter(unittest.TestCase):\n",
+        "\n",
+        "    def test_perimeter_with_value_one(self):\n",
+        "        self.assertAlmostEqual(perimeter(1), 6.28319, 5)\n",
+        "\n",
+        "    def test_wrong_number_type_radius_should_raise_error(self):\n",
+        "        self.assertRaises(TypeError, perimeter, '-1')\n",
+        "\n",
+        "    def test_zero_should_raise_error(self):\n",
+        "        self.assertRaises(ValueError, perimeter, 0)\n",
+        "\n",
+        "    def test_negative_radius_should_raise_error(self):\n",
+        "        self.assertRaises(ValueError, perimeter, -1)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestPerimeter)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PzayZwj_Hnya",
+        "outputId": "74f6106c-82d0-4fee-8094-13583fe5d59d"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_negative_radius_should_raise_error (__main__.TestPerimeter) ... ok\n",
+            "test_perimeter_with_value_one (__main__.TestPerimeter) ... ok\n",
+            "test_wrong_number_type_radius_should_raise_error (__main__.TestPerimeter) ... ok\n",
+            "test_zero_should_raise_error (__main__.TestPerimeter) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 4 tests in 0.027s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=4 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 41
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "W6pnDst5HmyQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "import math\n",
+        "\n",
+        "\n",
+        "def perimeter(radius):\n",
+        "    \"\"\"The function returns the length of the circle.\"\"\"\n",
+        "\n",
+        "    if not (isinstance(radius, (int, float))):\n",
+        "        raise TypeError('The radius must be of type int or float.')\n",
+        "\n",
+        "    if not radius > 0:\n",
+        "        raise ValueError('The radius must be positive.')\n",
+        "\n",
+        "    return 2 * math.pi * radius"
+      ],
+      "metadata": {
+        "id": "FtKJHwjqEmF-"
+      },
+      "execution_count": 37,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def setUpModule():\n",
+        "    global calc\n",
+        "    calc = SimpleTaxCalculator()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7UA_HVOpF_WH",
+        "outputId": "1f4e1230-7ee9-47bd-c3d4-a72dd91ebd0a"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6.283185307179586"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 38
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import unittest\n",
+        "\n",
+        "\n",
+        "class Employee:\n",
+        "    \"\"\"A simple class that describes an employee of the company.\"\"\"\n",
+        "\n",
+        "    tax_rate = 0.17\n",
+        "\n",
+        "    def __init__(self, first_name, last_name, age, salary):\n",
+        "        self.first_name = first_name\n",
+        "        self.last_name = last_name\n",
+        "        self.age = age\n",
+        "        self.salary = salary\n",
+        "\n",
+        "    @property\n",
+        "    def email(self):\n",
+        "        return f'{self.first_name.lower()}.{self.last_name.lower()}@mail.com'\n",
+        "\n",
+        "    @property\n",
+        "    def tax(self):\n",
+        "        return round(self.salary * self.tax_rate, 2)\n",
+        "\n",
+        "\n",
+        "class TestEmployee(unittest.TestCase):\n",
+        "\n",
+        "    def setUp(self):\n",
+        "        print('setting up ...')\n",
+        "        self.emp = Employee('John', 'Smith', 40, 80000)\n",
+        "\n",
+        "    def test_email(self):\n",
+        "        print('test_email ...')\n",
+        "        self.assertEqual(self.emp.email, 'john.smith@mail.com')\n",
+        "\n",
+        "    def test_email_after_changing_first_name(self):\n",
+        "        print('test_email_after_changing_first_name ...')\n",
+        "        self.emp.first_name = 'Mike'\n",
+        "        print(self.emp.email)\n",
+        "        self.assertEqual(self.emp.email, 'mike.smith@mail.com')\n",
+        "\n",
+        "    def test_email_after_changing_last_name(self):\n",
+        "        print('test_email_after_changing_last_name ...')\n",
+        "        self.emp.last_name = 'Doe'\n",
+        "        print(self.emp.email)\n",
+        "        self.assertEqual(self.emp.email, 'john.doe@mail.com')\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestEmployee)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fBCaVlplqG4H",
+        "outputId": "cf9eb5e8-cf43-4171-d409-efc67741c691"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_email (__main__.TestEmployee) ... ok\n",
+            "test_email_after_changing_first_name (__main__.TestEmployee) ... ok\n",
+            "test_email_after_changing_last_name (__main__.TestEmployee) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.018s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "setting up ...\n",
+            "test_email ...\n",
+            "setting up ...\n",
+            "test_email_after_changing_first_name ...\n",
+            "mike.smith@mail.com\n",
+            "setting up ...\n",
+            "test_email_after_changing_last_name ...\n",
+            "john.doe@mail.com\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 44
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import datetime\n",
+        "import unittest\n",
+        "\n",
+        "class Note:\n",
+        "\n",
+        "    def __init__(self, content):\n",
+        "        self.content = content\n",
+        "        self.creation_time = datetime.datetime.now() \\\n",
+        "            .strftime('%m-%d-%Y %H:%M:%S')\n",
+        "\n",
+        "class TestNote(unittest.TestCase):\n",
+        "\n",
+        "    def setUp(self):\n",
+        "        self.note = Note('Simple note.')\n",
+        "\n",
+        "    def test_note_has_content_instance_attr(self):\n",
+        "        msg = 'Instancja klasy Note nie posiada atrybutu content.'\n",
+        "        self.assertTrue(hasattr(self.note, 'content'), msg)\n",
+        "\n",
+        "suite = unittest.TestLoader().loadTestsFromTestCase(TestEmployee)\n",
+        "unittest.TextTestRunner(verbosity=2).run(suite)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-NNiW8I-qXCX",
+        "outputId": "cecd7bfd-66da-49a9-d114-3015c825dec3"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "test_email (__main__.TestEmployee) ... ok\n",
+            "test_email_after_changing_first_name (__main__.TestEmployee) ... ok\n",
+            "test_email_after_changing_last_name (__main__.TestEmployee) ... ok\n",
+            "\n",
+            "----------------------------------------------------------------------\n",
+            "Ran 3 tests in 0.017s\n",
+            "\n",
+            "OK\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "setting up ...\n",
+            "test_email ...\n",
+            "setting up ...\n",
+            "test_email_after_changing_first_name ...\n",
+            "mike.smith@mail.com\n",
+            "setting up ...\n",
+            "test_email_after_changing_last_name ...\n",
+            "john.doe@mail.com\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<unittest.runner.TextTestResult run=3 errors=0 failures=0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 45
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import uuid\n",
+        "import unittest\n",
+        "\n",
+        "class Product:\n",
+        "\n",
+        "    def __init__(self, product_name, price):\n",
+        "        self.product_id = self.get_id()\n",
+        "        self.product_name = product_name\n",
+        "        self.price = price\n",
+        "\n",
+        "    def __repr__(self):\n",
+        "        return f\"Product(product_name='{self.product_name}', price={self.price})\"\n",
+        "\n",
+        "    @staticmethod\n",
+        "    def get_id():\n",
+        "        return str(uuid.uuid4().fields[-1])[:6]\n",
+        "\n",
+        "\n",
+        "class TestProduct(unittest.TestCase):\n",
+        "\n",
+        "    def test_product_has_get_id_function_attribute(self):\n",
+        "        self.assertTrue(hasattr(Product, 'get_id'))\n",
+        "        self.assertTrue(callable(Product.get_id))"
+      ],
+      "metadata": {
+        "id": "eHuzS3fcuxXg"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
